@@ -1,9 +1,9 @@
-
-
 function App() {
   return (
-    <div className="app">
-      <h1>hola mundo desde app</h1>
+    <div className="container">
+      <header>
+        <h1>hola mundo desde app</h1>
+      </header>
     </div>
   )
 }
