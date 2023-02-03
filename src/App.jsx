@@ -1,11 +1,12 @@
 import Ask from './components/Ask/Ask'
-
+import Header from './components/Header/Header'
 
 function App() {
   return (
     <div className="container">
+      <header/>
+        <Header/>
       <header>
-        <h1>Gasto Semanal</h1>
 
         <div className="contenido-principal contenido">
           <Ask/>
