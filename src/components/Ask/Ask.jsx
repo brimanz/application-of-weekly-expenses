@@ -1,13 +1,34 @@
+import {useState} from 'react'
+
+
 const  Ask = () =>{
+	const [cantidad, setCantidad] = useState(0);
+
+
+	const definirPresupuesto = e =>{
+		setCantidad(parseInt(e.target.value))
+	}
+
+	const agregarPresupuesto = e =>{
+		e.preventDefault();
+
+		//validate zone
+
+	}
+ 
+
 	return(
 		<>
 			<h2>Establece el Presupuesto semanal</h2>
 
-			<form>
+			<form
+				onSubmit={agregarPresupuesto}
+			>
 				<input
 					type="number"
 					className="u-full-width"
 					placeholder="Ingresa tu presupuesto"
+					onChange={definirPresupuesto}
 				/>
 
 				<input
