@@ -3,7 +3,7 @@ import {useState} from 'react'
 
 const  Ask = () =>{
 	const [cantidad, setCantidad] = useState(0);
-
+	const [error, setError] = useState(false);
 
 	const definirPresupuesto = e =>{
 		setCantidad(parseInt(e.target.value))
@@ -13,13 +13,23 @@ const  Ask = () =>{
 		e.preventDefault();
 
 		//validate zone
+		if(cantidad < 1 || isNaN(cantidad)){
+			setError(true);
+			return;
+		}
 
+		setError(false)
 	}
  
 
 	return(
 		<>
 			<h2>Establece el Presupuesto semanal</h2>
+
+			{
+				error ? <p className="error alert-danger">Valor Incorrecto</p> 
+				: null
+			}
 
 			<form
 				onSubmit={agregarPresupuesto}
