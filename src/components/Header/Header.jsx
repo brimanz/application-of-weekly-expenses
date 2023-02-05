@@ -1,6 +1,6 @@
 const Header = ()=>{
 	return(
-		<h2>Gasto Semanal</h2>
+		<h1>Gastos Semanales</h1>
 	);
 }
 

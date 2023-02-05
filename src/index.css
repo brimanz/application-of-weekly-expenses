@@ -36,6 +36,7 @@ h1 {
   color: white;
   text-align: center;
   font-size: 4.8rem!important;
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.45);
 }
 h2 {
   font-family: 'Raleway', sans-serif;
