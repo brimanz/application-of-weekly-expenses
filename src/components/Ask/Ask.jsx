@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import Error from '../Error/Error'
 
 
 const  Ask = () =>{
@@ -27,7 +28,7 @@ const  Ask = () =>{
 			<h2>Establece el Presupuesto semanal</h2>
 
 			{
-				error ? <p className="error alert-danger">Valor Incorrecto</p> 
+				error ? <Error mensaje="Presupuesto incorrecto" /> 
 				: null
 			}
 
