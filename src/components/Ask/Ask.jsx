@@ -2,7 +2,7 @@ import {useState} from 'react'
 import Error from '../Error/Error'
 
 
-const  Ask = () =>{
+const  Ask = ({setPresupuesto, setRestante}) =>{
 	const [cantidad, setCantidad] = useState(0);
 	const [error, setError] = useState(false);
 
@@ -19,7 +19,9 @@ const  Ask = () =>{
 			return;
 		}
 
-		setError(false)
+		setError(false);
+		setPresupuesto(cantidad);
+		setRestante(cantidad);
 	}
  
 
