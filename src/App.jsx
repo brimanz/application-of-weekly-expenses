@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import Ask from './components/Ask/Ask'
 import Header from './components/Header/Header'
+import Form from './components/Form/Form'
 
 
 function App() {
@@ -19,6 +20,16 @@ function App() {
             setPresupuesto={setPresupuesto}
             setRestante={setRestante}
           />
+
+          <div className="row">
+            <div className="one-half column">
+              <Form/>
+            </div>
+
+            <div className="one-half column">
+              2
+            </div>
+          </div>
         </div>
       </header>
     </div>
