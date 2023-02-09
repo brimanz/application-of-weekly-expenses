@@ -1,7 +1,5 @@
 import {useState} from 'react'
-import Ask from './components/Ask/Ask'
-import Header from './components/Header/Header'
-import Form from './components/Form/Form'
+import {Header, Ask, Form} from './components'
 
 
 function App() {
