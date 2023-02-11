@@ -2,8 +2,19 @@ import {useState} from 'react'
 
 
 const Form = () =>{
+	const [gasto, setGasto] = useState("");
+	const [cantidad, setCantidad] = useState(0);
+
+	const agregarGasto = e => {
+		e.preventDefault();
+
+		//validate zone 
+	}
+
 	return(
-		<form>
+		<form
+			onSubmit={agregarGasto}
+		>
 			<h2>Agrega tus Gastos</h2>
 
 			<div className="campo">
@@ -12,6 +23,8 @@ const Form = () =>{
 					type="text"
 					className="u-full-width"
 					placeholder="Ej. Comida"
+					value={gasto}
+					onChange={e => setGasto(e.target.value)}
 				/>
 			</div>
 
@@ -21,6 +34,8 @@ const Form = () =>{
 					type="number"
 					className="u-full-width"
 					placeholder="Ej. 200"
+					value={cantidad}
+					onChange={e => setCantidad(parseInt(e.target.value, 10))}
 				/>
 			</div>
 
