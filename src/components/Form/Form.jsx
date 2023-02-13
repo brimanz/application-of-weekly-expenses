@@ -1,9 +1,10 @@
 import {useState} from 'react'
 import Error from '../Error/Error'
+import shortid from 'shortid'
 
 
 const Form = () =>{
-	const [gasto, setGasto] = useState("");
+	const [nombre, setNombre] = useState("");
 	const [cantidad, setCantidad] = useState(0);
 	const [error, setError] = useState(false);
 
@@ -11,12 +12,20 @@ const Form = () =>{
 		e.preventDefault();
 
 		//validate zone
-		if(cantidad < 1 || isNaN(cantidad) || gasto.trim() === ''){
+		if(cantidad < 1 || isNaN(cantidad) || nombre.trim() === ''){
 			setError(true);
 			return;
 		} 
 
 		setError(false);
+
+		const gasto = {
+			id: shortid.generate(),
+			nombre,
+			cantidad
+		}
+
+		console.log(gasto);
 	}
 
 	return(
@@ -35,8 +44,8 @@ const Form = () =>{
 					type="text"
 					className="u-full-width"
 					placeholder="Ej. Comida"
-					value={gasto}
-					onChange={e => setGasto(e.target.value)}
+					value={nombre}
+					onChange={e => setNombre(e.target.value)}
 				/>
 			</div>
 
