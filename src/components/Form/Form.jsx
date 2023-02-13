@@ -3,7 +3,7 @@ import Error from '../Error/Error'
 import shortid from 'shortid'
 
 
-const Form = () =>{
+const Form = ({agregarNuevoGasto}) =>{
 	const [nombre, setNombre] = useState("");
 	const [cantidad, setCantidad] = useState(0);
 	const [error, setError] = useState(false);
@@ -25,7 +25,11 @@ const Form = () =>{
 			cantidad
 		}
 
-		console.log(gasto);
+		agregarNuevoGasto(gasto);
+
+		//form reset
+		setNombre("");
+		setCantidad(0);
 	}
 
 	return(
