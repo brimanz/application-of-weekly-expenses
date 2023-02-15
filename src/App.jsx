@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import {Header, Ask, Form} from './components'
+import {Header, Ask, Form, Listado} from './components'
 
 
 function App() {
@@ -41,7 +41,9 @@ function App() {
                 </div>
 
                 <div className="one-half column">
-                  2
+                  <Listado
+                    gastos={gastos}
+                  />
                 </div>
               </div>
             )
