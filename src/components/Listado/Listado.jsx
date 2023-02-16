@@ -1,5 +1,6 @@
 import Gasto from '../Gasto/Gasto'
 
+
 const Listado = ({gastos}) => {
 	return(
 		<div className="gastos-realizados">

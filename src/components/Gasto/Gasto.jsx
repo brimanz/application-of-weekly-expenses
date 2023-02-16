@@ -1,3 +1,5 @@
+
+
 const Gasto = ({gasto}) =>{
 	return(
 		<li className="gastos">
