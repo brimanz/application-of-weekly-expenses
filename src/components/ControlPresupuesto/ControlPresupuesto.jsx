@@ -1,6 +1,16 @@
-const ControlPresupuesto = () =>{
+
+
+const ControlPresupuesto = ({presupuesto, restante}) =>{
 	return(
-		<h2>hola mundo desde ControlPresupuesto</h2>
+		<>
+			<div className="alert alert-primary">
+				Presupuesto: ${presupuesto}
+			</div>
+
+			<div className="alert">
+				Restante: ${restante}
+			</div>
+		</>
 	);
 }
 
