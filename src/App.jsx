@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import {Header, Ask, Form, Listado, ControlPresupuesto} from './components'
 
 
@@ -7,12 +7,27 @@ function App() {
   const [restante, setRestante] = useState(0);
   const [load, setLoad] = useState(true);
   const [gastos, setGastos] = useState([]);
+  const [gasto, setGasto] = useState({});
+  const [creargasto, setCrearGasto] = useState(false);
+
+  useEffect(() =>{
+    if(creargasto) {
+      setGastos([
+        ...gastos, 
+        gasto
+      ]);
+
+      const presupuestoRestante = restante - gasto.cantidad;
+      setRestante(presupuestoRestante);
+
+      setCrearGasto(false);
+    }
+  }, [gasto])
+
+
 
   const agregarNuevoGasto = gasto =>{
-    setGastos([
-      ...gastos, 
-      gasto
-    ]);
+    
   }
 
 
@@ -36,7 +51,8 @@ function App() {
               <div className="row">
                 <div className="one-half column">
                   <Form
-                    agregarNuevoGasto={agregarNuevoGasto}
+                    setGasto={setGasto}
+                    setCrearGasto={setCrearGasto}
                   />
                 </div>
 
