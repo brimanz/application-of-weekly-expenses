@@ -24,8 +24,6 @@ function App() {
     }
   }, [gasto])
 
-
-
   const agregarNuevoGasto = gasto =>{
     
   }
