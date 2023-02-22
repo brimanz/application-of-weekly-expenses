@@ -1,3 +1,4 @@
+import {revisarPresupuesto} from '../../helper'
 
 
 const ControlPresupuesto = ({presupuesto, restante}) =>{
@@ -7,7 +8,7 @@ const ControlPresupuesto = ({presupuesto, restante}) =>{
 				Presupuesto: ${presupuesto}
 			</div>
 
-			<div className="alert">
+			<div className={revisarPresupuesto(presupuesto, restante)}>
 				Restante: ${restante}
 			</div>
 		</>
