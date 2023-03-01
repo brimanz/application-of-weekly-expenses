@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import Error from '../Error/Error'
 import shortid from 'shortid'
+import PropTypes from 'prop-types'
 
 
 const Form = ({setGasto, setCrearGasto}) =>{
@@ -72,6 +73,11 @@ const Form = ({setGasto, setCrearGasto}) =>{
 			/>
 		</form>
 	);
+}
+
+Form.propTypes = {
+	setGasto: PropTypes.func.isRequired,
+	setCrearGasto: PropTypes.func.isRequired
 }
 
 

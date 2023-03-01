@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import PropTypes from 'prop-types'
 import Error from '../Error/Error'
 
 
@@ -52,6 +53,12 @@ const  Ask = ({setPresupuesto, setRestante, setLoad}) =>{
 			</form>
 		</>
 	);
+}
+
+Ask.propTypes = {
+	setPresupuesto: PropTypes.func.isRequired, 
+	setRestante: PropTypes.func.isRequired,
+	setLoad: PropTypes.func.isRequired
 }
 
 
