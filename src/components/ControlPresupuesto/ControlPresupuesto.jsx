@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import {revisarPresupuesto} from '../../helper'
 
 
@@ -13,6 +14,11 @@ const ControlPresupuesto = ({presupuesto, restante}) =>{
 			</div>
 		</>
 	);
+}
+
+ControlPresupuesto.propTypes = {
+	presupuesto: PropTypes.number.isRequired, 
+	restante: PropTypes.number.isRequired
 }
 
 
